@@ -7,32 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS:GO Simple Radar</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/checkbox.css">
+    <link rel="stylesheet" href="styles/darkmode.css">
+    <link rel="stylesheet" href="styles/button.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <h1>Download Simple Radar for CS:GO</h1>
     <div class="container">
-        <h1>Download Simple Radar for CS:GO</h1>
-        <form>
-            <label>
-                <input type="checkbox" name="color" value="1">
-                Color
-            </label>
-            <label>
-                <input type="checkbox" name="callout" value="1">
-                Callout
-            </label>
-            <label>
-                <input type="checkbox" name="elevation" value="1">
-                Elevation
-            </label>
-            <label>
-                <input type="checkbox" name="buyzone" value="1">
-                Buyzone
-            </label>
-            <input type="submit" value="Download">
-        </form>
+        <table aria-describedby="Options">
+            <tr>
+                <td>
+                    <img alt="map preview" width="300" height=300"
+                        src="https://uploads-ssl.webflow.com/5d5ab0de3f2789196e87264e/603be21cb413139882f22ee1_Color0Pat0Buy0Spec0.jpg">
+                </td>
+                <td>
+                    <form>
+                        <label>
+                            <div class="checkbox-con">
+                                <input type="checkbox" name="color" value="1">
+                                Color
+                            </div>
+                        </label>
+                        <label>
+                            <div class="checkbox-con">
+                                <input type="checkbox" name="callout" value="1">
+                                Callout
+                            </div>
+                        </label>
+                        <label>
+                            <div class="checkbox-con">
+                                <input type="checkbox" name="elevation" value="1">
+                                Elevation
+                            </div>
+                        </label>
+                        <label>
+                            <div class="checkbox-con">
+                                <input type="checkbox" name="buyzone" value="1">
+                                Buyzone
+                            </div>
+                        </label>
+                        <button class="dl-button" type="submit">
+                            Download
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <label class="switch">

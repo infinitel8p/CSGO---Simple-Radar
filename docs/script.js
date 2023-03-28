@@ -13,10 +13,13 @@ document.querySelector('form').addEventListener('submit', function (event) {
     link.remove();
 });
 
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
     document.body.classList.add('light-mode');
 } else {
+    // if browser default is dark mode set color scheme to dark and flip switch
     document.body.classList.remove('light-mode');
+    document.querySelector('.switch input').checked = true;
 }
 
 const toggleButton = document.querySelector('#dark-mode-toggle');

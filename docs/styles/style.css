@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,25 +7,49 @@ body {
     justify-content: center;
 
     background-color: #212121;
-    color: #fff;
+    color: #e8e8e8;
     font-family: 'JetBrains Mono', monospace;
     font-size: 16px;
     line-height: 1.5;
-    margin: 20px 20px;
+    margin: 10px 10px;
     padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body.light-mode {
     background-color: #e8e8e8;
     color: #212121;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-h1 {
-    font-size: 40px;
+.title {
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    white-space: nowrap;
+}
+
+.title-color {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 1000;
+    font-size: 60px;
+    color: #FBCA1F;
+    /* Add a white background */
+    text-shadow: 0 0 150px #FBCA1F;
+    margin-top: 10px;
+    background-image: linear-gradient(45deg, #FBCA1F, #FBCA1F 60%, #ff7300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 td {
     padding-right: 20px;
+}
+
+a {
+    color: #FBCA1F;
 }
 
 label {
@@ -35,7 +61,6 @@ label {
     margin-top: 50px;
 }
 
-
 input[type="submit"] {
     background-color: #ccc;
     color: #333;
@@ -43,4 +68,42 @@ input[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+    height: 5px;
+    font-size: small;
+    background-color: #FBCA1F;
+    color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Style the links in the footer */
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    flex-grow: 1;
+}
+
+/* Style the text in the footer */
+footer p {
+    margin-right: 0px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

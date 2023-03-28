@@ -6,16 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS:GO Simple Radar</title>
+    <!-- CUSTOM STYLESHEETS -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/checkbox.css">
     <link rel="stylesheet" href="styles/darkmode.css">
     <link rel="stylesheet" href="styles/button.css">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/radar.png">
 </head>
 
-<body>
-    <h1>Download Simple Radar for CS:GO</h1>
+<body class="unselectable">
+    <div class="title">
+        <span>Download</span>
+        <span class="title-color">Simple Radar</span>
+        <span>for CS:GO!</span>
+    </div>
     <div class="container">
         <table aria-describedby="Map Configurator">
             <tr>
@@ -57,12 +65,20 @@
             </tr>
         </table>
     </div>
-
+    <!-- DARKMODE SWITCH -->
     <label class="switch">
         <input type="checkbox" id="dark-mode-toggle">
         <span class="slider"></span>
     </label>
-
+    <!-- FOOTER -->
+    <footer>
+        <p>All Credits go to:</p>
+        <nav>
+            <a href="https://readtldr.gg/simpleradar">https://readtldr.gg/simpleradar</a>
+            <a href="about.html">About</a>
+        </nav>
+    </footer>
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 </body>
 

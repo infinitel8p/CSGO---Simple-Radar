@@ -2,16 +2,20 @@ body {
     background-color: #212121;
     /* light mode background-color: #e8e8e8 */
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
+    margin: 50px 50px;
     padding: 0;
+}
+
+body.light-mode {
+    background-color: #e8e8e8;
+    color: #212121;
 }
 
 h1 {
     font-size: 36px;
-    margin-bottom: 20px;
 }
 
 label {
@@ -23,10 +27,13 @@ input[type="checkbox"] {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: #555;
+    background-color: #777;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 input[type="checkbox"]:checked {
@@ -40,4 +47,69 @@ input[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    ;
+    -webkit-transition: .4s;
+    ;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #303136;
+}
+
+input:checked+.slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    -webkit-box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }

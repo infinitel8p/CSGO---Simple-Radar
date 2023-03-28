@@ -12,3 +12,23 @@ document.querySelector('form').addEventListener('submit', function (event) {
     link.click();
     link.remove();
 });
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.body.classList.add('light-mode');
+} else {
+    document.body.classList.remove('light-mode');
+}
+
+const toggleButton = document.querySelector('#dark-mode-toggle');
+toggleButton.addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+});
+
+const toggleSwitch = document.querySelector('.switch input');
+toggleSwitch.addEventListener('change', function () {
+    if (this.checked) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+});
